@@ -1,0 +1,109 @@
+<h2 class="page-header">Create A New Character</h2>
+<form (submit)="onNewcharacterSubmit()">
+	<div class="row">
+	<div class="col-md-4">
+		<div class="form-group">
+			<label>Character Concept</label>
+			<textarea [(ngModel)]="characterConcept" name="characterConcept" class="form-control" id="character-concept"></textarea>
+		</div>
+	</div>
+	<div class="col-md-4">
+
+		<div class="form-group">
+			<label>Name</label>
+			<input type="text" [(ngModel)]="name" name="name" class="form-control">
+		</div>
+		<div class="form-group">
+			  <label for="sel1">Stock</label>
+			  <select type="text" [(ngModel)]="stock" name="stock" class="form-control" id="sel1">
+			    <option>Man</option>
+			    <option>Elf</option>
+			    <option>Dwarf</option>
+			    <option>Orc</option>
+			  </select>
+		</div>
+		<div class="form-group">
+			  <label for="sel1">Game</label>
+			  <select type="text" [(ngModel)]="game" name="game" class="form-control" id="sel1">
+			    <option>Burning Wheel</option>
+			    <option>Dungeons and Dragons</option>
+			  </select>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<div class="form-group">
+			<label for="sel1">Lifepath 1</label>
+			  <select type="text" [(ngModel)]="lifepath1" name="lifepath1" class="form-control" id="sel1">
+			    <option>Born Peasant</option>
+			    <option>Village Born</option>
+			    <option>City Born</option>
+			    <option>Born Noble</option>
+			  </select>
+		</div>
+		<div class="form-group">
+			<label for="sel1">Lifepath 2</label>
+			  <select type="text" [(ngModel)]="lifepath2" name="lifepath2" class="form-control" id="sel1">
+			    <option>Hunter</option>
+			    <option>Scholar</option>
+			    <option>Recluse Wizard</option>
+			    <option>Wizard of War</option>
+			    <option>Lord</option>
+			  </select>
+		</div>
+		<div class="form-group">
+			<label for="sel1">Lifepath 3</label>
+			  <select type="text" [(ngModel)]="lifepath3" name="lifepath3" class="form-control" id="sel1">
+			    <option>Bard</option>
+			    <option>Duke</option>
+			    <option>Outlaw</option>
+			    <option>Judge</option>
+			    <option>Rouge Wizard</option>
+			  </select>
+		</div>
+	</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+		<div class="form-group">
+			<label>Belief 1</label>
+			<textarea [(ngModel)]="belief1" name="belief1" class="form-control" id="character-concept"></textarea>
+		</div>
+	</div>
+		<div class="col-md-4">
+		<div class="form-group">
+			<label>Belief 2</label>
+			<textarea [(ngModel)]="belief2" name="belief2" class="form-control" id="character-concept"></textarea>
+		</div>
+	</div>
+		<div class="col-md-4">
+		<div class="form-group">
+			<label>Belief 3</label>
+			<textarea [(ngModel)]="belief3" name="belief3" class="form-control" id="character-concept"></textarea>
+		</div>
+	</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+		<div class="form-group">
+			<label>Instinct 1</label>
+			<textarea [(ngModel)]="instinct1" name="instinct1" class="form-control" id="character-concept"></textarea>
+		</div>
+	</div>
+		<div class="col-md-4">
+		<div class="form-group">
+			<label>Instinct 2</label>
+			<textarea [(ngModel)]="instinct2" name="instinct2" class="form-control" id="character-concept"></textarea>
+		</div>
+	</div>
+		<div class="col-md-4">
+		<div class="form-group">
+			<label>Instinct 3</label>
+			<textarea [(ngModel)]="instinct3" name="instinct3" class="form-control" id="character-concept"></textarea>
+		</div>
+	</div>
+	</div>
+
+	<div class="form-group">
+		<input type="submit" class="btn btn-primary" value="Submit">
+	</div>
+</form>

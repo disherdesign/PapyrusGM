@@ -1,0 +1,59 @@
+<div class="row">
+	<div class="col-md-8 center-text">
+		<div fxLayout="row" fxLayoutAlign="center center" class="canvas--wrap">
+	<canvas fxFlexAlign="center" id="canvas" class="canvas" width="700" height="800" >
+		
+	</canvas>
+</div> 
+	</div>
+	<div class="col-md-4 center-text">
+		<form>
+			<div class="form-group">
+			<label for="sel1">Dice</label>
+			  <select type="text"  [(ngModel)]="numDice" name="numDice" class="form-control" id="sel1">
+			    <option>1</option>
+			    <option>2</option>
+			    <option>3</option>
+			    <option>4</option>
+			    <option>5</option>
+			    <option>6</option>
+			    <option>7</option>
+			    <option>8</option>
+			    <option>9</option>
+			    <option>10</option>
+			  </select>
+		</div>
+		<button style="width:100%" class="btn btn-primary form-control" (click)="rollDice(numDice)" type="submit">Roll</button>
+	</form><br>
+	<form (submit)="postMessage()">
+		<input [(ngModel)]="message" name="message" placeholder="Chat" class="form-control ">
+<!-- 		<button  style="width:20%" class="btn btn-primary" type="submit">Post Message</button>
+ -->	</form>
+
+		<table class="table">
+		<tbody>
+		<tr *ngFor="let mes of messages.reverse()">
+			<td>{{mes.msg}}</td>
+			<td>{{mes.date}}</td>
+		</tr>
+		</tbody>
+		</table>
+
+	</div>
+</div>
+<hr>
+<div id="fabric-toolbar" class="form-group">
+	<div class="row">
+	<div class="col-md-4">
+	        	<button class="btn" (click)="onAddCoin()" >Add Coin</button>
+		<button class="btn" (click)="deleteSelectedObject()" >Delete Selected Object</button>
+	</div>
+	<div class="col-md-4">
+	    <label class="checkbox">
+        <input type="checkbox" name="drawingMode" [checked]="this.canvas.isDrawingMode" (change)="this.canvas.isDrawingMode = !this.canvas.isDrawingMode" />Drawing Mode</label>
+	</div>
+	<div class="col-md-4">
+		
+	</div>
+
+</div>

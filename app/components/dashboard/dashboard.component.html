@@ -1,0 +1,29 @@
+
+
+<div>
+	<h2>{{owner}}'s Dashboard</h2>
+	<hr>
+	 <h4>Burning Wheel Characters</h4>
+	<table class="table">
+    <thead>
+      <tr>
+        <th class="col-md-2">Character Name</th>
+        <th class="col-md-1">Stock</th>
+        <th>Current Lifepath</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="characters" >
+      <tr *ngFor="let character of characters">
+        <td><a [routerLink]="['/dashboard', character.name]">{{character.name}}</a></td>
+        <td>{{character.stock}}</td>
+        <td *ngIf="character.lifepaths">{{character.lifepaths[2].lifepath}}</td>
+      </tr>
+      <tr>
+      	<td>
+      		<a style="font-weight: bold" [routerLink]="['/dashboard/newcharacter']">Create a new character</a>
+      	</td><td></td><td></td>
+      </tr>
+     </tbody>
+    </table>
+
+
